@@ -1,0 +1,7 @@
+span {
+    font-size: 40px;
+}
+img {
+    width: 200px; /* Уменьшает ширину */
+    height: auto; /* Сохраняет пропорции */
+}
