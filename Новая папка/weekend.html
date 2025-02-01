@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильм - Уикенд с батей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="img/logo.png" alt="LOGO"></div>
+        <nav>
+            <a href="#"><span class="icon"><img src="img/profile.png"></span> Профиль</a>
+            <a href="#"><span class="icon"><img src="img/tickets1.jpg"></span> Билеты</a>
+        </nav>
+        <div class="header_line"></div>
+    </header>
+
+    <main>
+        <a href="index.html"><span class="back">← Назад</span></a>
+        <div class="movie-details">
+            <img src="img/weekend.png" alt="Уикенд с батей">
+            <div>
+                <h3>Уикенд с батей (16+)</h3>
+                <p>Фильм</p>
+                <div class="ratingS">
+                    <span class="star"><img src="img/star.png" alt=""></span>
+                    <span class="star"><img src="img/star.png" alt=""></span>
+                    <span class="star"><img src="img/star.png" alt=""></span>
+                    <span class="starE"><img src="img/star.png" alt=""></span>
+                    <span class="starE"><img src="img/star.png" alt=""></span>
+                </div>
+                <div class="rating">KinoPoisk - 5.4</div>
+                <div class="description">
+                    Себастьян — молодой амбициозный парень, готовящийся к самому важному дню 
+                    <span class="hidden_text">в своей жизни: свадьбе с Элли, девушкой из обеспеченной семьи. Но прежде чем сделать решающий шаг, Элли предлагает ему провести уикенд с её отцом — харизматичным, но эксцентричным человеком, который всегда был для неё главным авторитетом.</span>
+                    <span class="toggle_btn">....раскрыть</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>Расписание</h2>
+        <div class="schedule">
+            <div class="date">
+                <button class="date_btn">Пн, 9 янв</button>
+                <button class="date_btn">Вт, 10 янв</button>
+                <button class="date_btn">Ср, 11 янв</button>
+                <button class="date_btn">Чт, 12 янв</button>
+                <button class="date_btn">Пт, 13 янв</button>
+                <button class="date_btn">Сб, 14 янв</button>
+                <button class="date_btn">Вс, 15 янв</button>
+            </div>
+            <div id="time-container" class="timeSeans"></div>
+        </div>
+        <button class="buy-ticket">Продолжить</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

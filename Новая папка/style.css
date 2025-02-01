@@ -186,50 +186,28 @@ h1 {
     color: #344051;
 }
 
+.hidden_text {
+    display: none;
+
+}
+
+.toggleText {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.toggle_btn {
+    color: gray;
+    cursor: pointer;
+}
+
 h2 {
     margin-top: 40px;
     margin-bottom: 30px;
 }
 
-
-.hall-schedule {
-    margin-bottom: 30px;
-    background-color: #ffffff;
-}
-
-.hall-schedule h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-    background-color: #ffffff;
-}
-
-.times {
-    gap: 10px;
-    flex-wrap: nowrap;
+div.timeSeans {
     display: flex;
-    background-color: #ffffff;
-}
-
-button.timeSeans {
-    padding: 10px 15px;
-    background-color: white;
-    border: 1px solid rgb(170, 170, 170);
-    border-radius: 5px;
-    font-size: 14px;
-    color: gray;
-    cursor: pointer;
-}
-
-button.timeSeans.selected {
-    background-color: gray;
-    color: white;
-}
-
-button.timeSeans:hover {
-    background-color: white;
-    color: rgb(172, 172, 172);
-    border: 1px solid gray;
 }
 
 .date {
@@ -238,6 +216,7 @@ button.timeSeans:hover {
     margin: 10px 16px;
     background-color: #f1f1f1;
     border-radius: 15px;
+    height: 40px;
     margin-bottom: 40px;
 }
 
@@ -246,55 +225,8 @@ button.timeSeans:hover {
     font-size: 14px;
     color: black;
     background-color: #f1f1f1;
-    height: 100%;
-}
-
-.date_btn.selected {
-    background: #ffffff;
 }
 
 button.date_btn:hover {
     background: #ffffff;
-}
-
-.toggle_btn:hover {
-    text-decoration: underline;
-}
-
-/* Стили для описания */
-.description {
-    margin: 15px 0;
-    line-height: 1.5;
-    color: #344051;
-    font-size: 16px;
-}
-
-.visible-text {
-    display: inline;
-}
-
-.hidden-text {
-    display: none;
-}
-
-.toggle-btn {
-    color: #bbbbbb;
-    cursor: pointer;
-    display: inline;
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-}
-
-.toggle-btn:hover {
-    text-decoration: underline;
-}
-
-.error {
-    color: red;
-    padding: 15px;
-    border: 2px solid red;
-    margin: 20px;
-    border-radius: 5px;
 }

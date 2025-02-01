@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильм - Уикенд с батей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="img/logo.png" alt="LOGO"></div>
+        <nav>
+            <a href="#"><span class="icon"><img src="img/profile.png"></span> Профиль</a>
+            <a href="#"><span class="icon"><img src="img/tickets1.jpg"></span> Билеты</a>
+        </nav>
+        <div class="header_line"></div>
+    </header>
+
+    <main>
+        <a href="index.html"><span class="back">← Назад</span></a>
+        <div class="movie-details">
+            <img src="img/dog.png" alt="Пёс">
+            <div>
+                <h3>Пёс (12+)</h3>
+                <p>Фильм</p>
+                <div class="ratingS">
+                    <span class="star"><img src="img/star.png" alt=""></span>
+                    <span class="star"><img src="img/star.png" alt=""></span>
+                    <span class="star"><img src="img/star.png" alt=""></span>
+                    <span class="starE"><img src="img/star.png" alt=""></span>
+                    <span class="starE"><img src="img/star.png" alt=""></span>
+                </div>
+                <div class="rating">KinoPoisk - 5.4</div>
+                <div class="description">Себастьян — молодой амбициозный парень, готовящийся к самому важному дню 
+                    <span class="hidden_text">в своей жизни: свадьбе с Элли, девушкой из обеспеченной семьи. Но прежде чем сделать решающий шаг, Элли предлагает ему провести уикенд с её отцом — харизматичным, но эксцентричным человеком, который всегда был для неё главным авторитетом.</span>
+                    <span class="toggle_btn" onclick="toggleDescription(this)">....раскрыть</span>
+                </div>
+
+                <script>
+                    function toggleDescription(element) {
+                     let hiddenText = element.previousElementSibling;
+                     if (hiddenText.style.display === "none" || hiddenText.style.display === "") {
+                         hiddenText.style.display = "inline";
+                         element.textContent = "... скрыть";
+                     } else {
+                         hiddenText.style.display = "none";
+                         element.textContent = "... раскрыть";
+                     }
+                     }
+
+                    document.addEventListener('DOMContentLoaded', function() {
+                    let hiddenText = document.querySelector('.hidden_text');
+                    let toggleButton = document.querySelector('.toggle_btn');
+                    hiddenText.style.display = 'none';
+                    toggleButton.textContent = "... раскрыть";
+                     });
+                </script>
+            </div>
+        </div>
+
+        <h2>Расписание</h2>
+        <div class="schedule">
+            <button>11:30</button>
+            <button>13:40</button>
+            <button>15:15</button>
+            <button>17:45</button>
+        </div>
+
+        <button class="buy-ticket">Продолжить</button>
+    </main>
+
+</body>
+</html>

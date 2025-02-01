@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Уикенд с батей (16+)",
+        "image": "img/weekend.png",
+        "rating": "5.4",
+        "ratingStars": [1, 1, 1, 0, 0],
+        "link": "weekend.html"
+    },
+    {
+        "title": "Пёс (12+)",
+        "image": "img/dog.png",
+        "rating": "6.7",
+        "ratingStars": [1, 1, 1, 1, 0],
+        "link": "dog.html"
+    },
+    {
+        "title": "Быть Сальвадором (16+)",
+        "image": "img/salvador.png",
+        "rating": "7.1",
+        "ratingStars": [1, 1, 1, 1, 0],
+        "link": "salvador.html"
+    },
+    {
+        "title": "Уикенд с батей",
+        "rating": "5.4",
+        "description": "Себастьян — молодой амбициозный парень, готовящийся к самому важному дню...",
+        "schedule": ["11:30", "13:40", "15:15", "17:45"]
+    }
+]
