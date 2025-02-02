@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (isMoviePage) loadMovieDetails();
 });
 
-// ========== ЗАГРУЗКА ГЛАВНОЙ СТРАНИЦЫ ==========
 function loadMovies() {
     fetch('movies.json')
         .then(response => response.json())
@@ -49,7 +48,6 @@ function createMovieCard(movie) {
     return card;
 }
 
-// ========== ЗАГРУЗКА СТРАНИЦЫ ФИЛЬМА ==========
 function loadMovieDetails() {
     const movieTitle = getMovieTitleFromURL();
     
@@ -110,28 +108,23 @@ function createSchedule(movie) {
     const timeContainer = document.getElementById('time-container');
     if (!dateContainer || !timeContainer) return;
 
-    // Создаем кнопки для дат
     dateContainer.innerHTML = movie.data
         .map(date => `<button class="date_btn" onclick="selectDate(this)">${date}</button>`)
         .join('');
 
-    // По умолчанию выбираем первую дату
     if (movie.data.length > 0) {
         selectDate(dateContainer.querySelector('.date_btn'));
     }
 }
 
 function selectDate(selectedButton) {
-    // Удаляем класс 'selected' у всех кнопок даты
     const allButtons = document.querySelectorAll('.date_btn');
     allButtons.forEach(button => {
         button.classList.remove('selected');
     });
 
-    // Добавляем класс 'selected' к выбранной кнопке
     selectedButton.classList.add('selected');
 
-    // Обновляем расписание для выбранной даты
     updateSchedule(selectedButton.textContent);
 }
 
@@ -147,10 +140,8 @@ function updateSchedule(selectedDate) {
             const timeContainer = document.getElementById('time-container');
             if (!timeContainer) return;
 
-            // Очищаем контейнер с временами
             timeContainer.innerHTML = '';
 
-            // Добавляем расписание для выбранной даты
             const halls = [
                 { name: 'Красный зал', schedule: movie.scheduleRed },
                 { name: 'Синий зал', schedule: movie.scheduleBlue },
@@ -175,13 +166,11 @@ function updateSchedule(selectedDate) {
 }
 
 function selectTime(selectedButton) {
-    // Удаляем класс 'selected' у всех кнопок времени
     const allButtons = document.querySelectorAll('.timeSeans');
     allButtons.forEach(button => {
         button.classList.remove('selected');
     });
 
-    // Добавляем класс 'selected' к выбранной кнопке
     selectedButton.classList.add('selected');
 }
 
@@ -195,12 +184,4 @@ function getHiddenText(text) {
     const MAX_VISIBLE = 100;
     const lastSpaceIndex = text.lastIndexOf(' ', MAX_VISIBLE);
     return text.substring(lastSpaceIndex).trim();
-}
-
-function showError(message) {
-    console.error(message);
-    const errorEl = document.createElement('div');
-    errorEl.className = 'error';
-    errorEl.textContent = message;
-    document.body.prepend(errorEl);
 }
